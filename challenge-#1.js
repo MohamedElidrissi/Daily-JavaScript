@@ -1,5 +1,6 @@
 // https://dev.to/thepracticaldev/daily-challenge-1-string-peeler-4nep
 // @author Mohamed Elidrissi
+const test = require("./test");
 
 function stringPeeler(string) {
   if (!string || string.length <= 2) {
@@ -11,11 +12,6 @@ function stringPeeler(string) {
   return arr.join("");
 }
 
-function test(string, expected) {
-  const actual = stringPeeler(string);
-  console.assert(expected === actual, `Expected ${expected} but got ${actual}`);
-}
-
-test("hi", null);
-test("Hello", "ell");
-test("Mohamed Elidrissi", "ohamed Elidriss");
+test(null, stringPeeler("hi"));
+test("ell", stringPeeler("Hello"));
+test("ohamed Elidriss", stringPeeler("Mohamed Elidrissi"));
