@@ -7,7 +7,7 @@ A collection of solved daily challenges hosted by [dev.to](https://dev.to).
 To run any challenge you can use `node`
 
 ```
-node challenge-#X.js
+node day-X.js
 ```
 
 ## License
